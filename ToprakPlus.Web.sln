@@ -2,6 +2,14 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToprakPlus.Web", "ToprakPlus.Web\ToprakPlus.Web.csproj", "{420B88B4-06D4-4BAC-B469-50FB1A3C15D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToprakPlus.Entities", "ToprakPlus.Entities\ToprakPlus.Entities.csproj", "{42BF53A3-7F51-43D7-8ECD-04770008CED4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToprakPlus.DataAccess", "ToprakPlus.DataAccess\ToprakPlus.DataAccess.csproj", "{043B2851-68FA-4806-949D-A2498854C6BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToprakPlus.Core", "ToprakPlus.Core\ToprakPlus.Core.csproj", "{180D1606-696F-46DD-8738-6A74CD56EABF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToprakPlus.Business", "ToprakPlus.Business\ToprakPlus.Business.csproj", "{837A8EC9-FD2A-49DA-BA7B-0686C00EDE3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +20,21 @@ Global
 		{420B88B4-06D4-4BAC-B469-50FB1A3C15D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{420B88B4-06D4-4BAC-B469-50FB1A3C15D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{420B88B4-06D4-4BAC-B469-50FB1A3C15D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42BF53A3-7F51-43D7-8ECD-04770008CED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42BF53A3-7F51-43D7-8ECD-04770008CED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42BF53A3-7F51-43D7-8ECD-04770008CED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42BF53A3-7F51-43D7-8ECD-04770008CED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{043B2851-68FA-4806-949D-A2498854C6BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{043B2851-68FA-4806-949D-A2498854C6BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{043B2851-68FA-4806-949D-A2498854C6BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{043B2851-68FA-4806-949D-A2498854C6BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{180D1606-696F-46DD-8738-6A74CD56EABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{180D1606-696F-46DD-8738-6A74CD56EABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{180D1606-696F-46DD-8738-6A74CD56EABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{180D1606-696F-46DD-8738-6A74CD56EABF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{837A8EC9-FD2A-49DA-BA7B-0686C00EDE3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{837A8EC9-FD2A-49DA-BA7B-0686C00EDE3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{837A8EC9-FD2A-49DA-BA7B-0686C00EDE3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{837A8EC9-FD2A-49DA-BA7B-0686C00EDE3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
