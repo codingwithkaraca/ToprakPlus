@@ -1,7 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using ToprakPlus.DataAccess.Concrete.EntityFramework;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
+builder.Services.AddDbContext<ToprakPlusAppContext>(options => 
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SqlCon")));
+
 
 var app = builder.Build();
 
