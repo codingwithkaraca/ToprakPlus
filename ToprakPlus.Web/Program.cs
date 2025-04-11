@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ToprakPlus.DataAccess.Concrete.EntityFramework;
+using ToprakPlus.Web.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,7 @@ builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 builder.Services.AddDbContext<ToprakPlusAppContext>(options => 
     options.UseSqlServer(builder.Configuration.GetConnectionString("SqlCon")));
 
+builder.Services.AddIdentityWithExtension();
 
 var app = builder.Build();
 
