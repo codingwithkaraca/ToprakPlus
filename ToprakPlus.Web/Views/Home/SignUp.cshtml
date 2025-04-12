@@ -1,3 +1,5 @@
+@model UserVM
+
 @{
     ViewData["Title"] = "Kayıt Ol"; 
     Layout = null;
@@ -34,21 +36,26 @@
 <div class="register-card">
     <h3 class="text-center mb-4 text-success">Kayıt Ol</h3>
 
-    <form>
+    <form asp-controller="Home" asp-action="SignUp" method="post">
         <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Kullanıcı Adı" name="UserName" />
+            <input asp-for="UserName" type="text" class="form-control" placeholder="Kullanıcı Adı" name="UserName" />
+            <span class="text-danger" asp-validation-for="UserName"></span>
         </div>
         <div class="mb-3">
-            <input type="email" class="form-control" placeholder="E-posta" name="Email" />
+            <input asp-for="Email" type="email" class="form-control" placeholder="E-posta" name="Email" />
+            <span class="text-danger" asp-validation-for="Email"></span>
         </div>
         <div class="mb-3">
-            <input type="tel" class="form-control" placeholder="Telefon" name="Phone" />
+            <input asp-for="Phone" type="tel" class="form-control" placeholder="Telefon" name="Phone" />
+            <span class="text-danger" asp-validation-for="Phone"></span>
         </div>
         <div class="mb-3">
-            <input type="password" class="form-control" placeholder="Şifre" name="Password" />
+            <input asp-for="Password" type="password" class="form-control" placeholder="Şifre" name="Password" />
+            <span class="text-danger" asp-validation-for="Password"></span>
         </div>
         <div class="mb-3">
-            <input type="password" class="form-control" placeholder="Şifre (Tekrar)" name="PasswordConfirm" />
+            <input asp-for="PasswordConfirm" type="password" class="form-control" placeholder="Şifre (Tekrar)" name="PasswordConfirm" />
+            <span class="text-danger" asp-validation-for="PasswordConfirm"></span>
         </div>
         <div class="d-grid">
             <button type="submit" class="btn btn-success">Kayıt Ol</button>
@@ -57,7 +64,7 @@
 
     <div class="text-center mt-4">
         <span class="text-muted">Zaten hesabın var mı?</span>
-        <a href="/Login" class="text-success text-decoration-none fw-semibold">Giriş Yap</a>
+        <a href="/Home/Login" class="text-success text-decoration-none fw-semibold">Giriş Yap</a>
     </div>
 </div>
 

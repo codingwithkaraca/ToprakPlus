@@ -2,6 +2,7 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ToprakPlus.Entities;
+using ToprakPlus.Entities.ViewModels;
 using ToprakPlus.Web.Models;
 
 namespace ToprakPlus.Web.Controllers;
@@ -32,11 +33,33 @@ public class HomeController : Controller
         return View();
     }
     
-    /*public Task<IActionResult> SignUp(UserVM request)
+    [HttpPost]
+    public async Task<IActionResult> SignUp(UserVM request)
     {
-        
+        if (!ModelState.IsValid)
+        {
+            return View();
+        }
+
+        var identityResult = await _userManager.CreateAsync(new User()
+        {
+            UserName = request.UserName,
+            Email = request.Email,
+            PhoneNumber = request.Phone,
+        }, request.PasswordConfirm);
+
+        if (identityResult.Succeeded)
+        {
+            TempData["SuccessMessage"] = "Üyelik kayıt işlemi başarıyla gerçekleşmiştir";
+            return RedirectToAction(nameof(HomeController.SignUp));
+        }
+
+        foreach (var error in identityResult.Errors)
+        {
+            ModelState.AddModelError(string.Empty, error.Description);
+        }
         return View();
-    }*/
+    }
     
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
