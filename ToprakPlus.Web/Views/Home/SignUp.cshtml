@@ -1,0 +1,65 @@
+@{
+    ViewData["Title"] = "Kayıt Ol"; 
+    Layout = null;
+}
+
+<!-- Stil -->
+<style>
+  body {
+    background: linear-gradient(to right, #a8e063, #56ab2f);
+    min-height: 100vh;
+  }
+
+  .register-card {
+    max-width: 450px;
+    margin: auto;
+    margin-top: 5%;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+  }
+
+  .form-control::placeholder {
+    color: #999;
+    font-style: italic;
+  }
+</style>
+
+<!-- Kütüphaneler -->
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/lib/fontawesome/css/all.min.css">
+
+<!-- Kayıt Kartı -->
+<div class="register-card">
+    <h3 class="text-center mb-4 text-success">Kayıt Ol</h3>
+
+    <form>
+        <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Kullanıcı Adı" name="UserName" />
+        </div>
+        <div class="mb-3">
+            <input type="email" class="form-control" placeholder="E-posta" name="Email" />
+        </div>
+        <div class="mb-3">
+            <input type="tel" class="form-control" placeholder="Telefon" name="Phone" />
+        </div>
+        <div class="mb-3">
+            <input type="password" class="form-control" placeholder="Şifre" name="Password" />
+        </div>
+        <div class="mb-3">
+            <input type="password" class="form-control" placeholder="Şifre (Tekrar)" name="PasswordConfirm" />
+        </div>
+        <div class="d-grid">
+            <button type="submit" class="btn btn-success">Kayıt Ol</button>
+        </div>
+    </form>
+
+    <div class="text-center mt-4">
+        <span class="text-muted">Zaten hesabın var mı?</span>
+        <a href="/Login" class="text-success text-decoration-none fw-semibold">Giriş Yap</a>
+    </div>
+</div>
+
+<!-- Script -->
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
